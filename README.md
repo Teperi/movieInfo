@@ -20,3 +20,11 @@
 - [x] TV Show Detail
 - [x] Movie Detail
 - [x] Search (TV,Movie)
+
+## Code Challenges
+
+- [x] IMDB Link
+- [x] Tabs inside of Movie/show Detials(Youtube Videos, Production Company& Countires)
+- [x] Collections Link
+- [x] /collections router
+- [x] On Tv Show, show seasons

@@ -13,7 +13,9 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   padding: 0 10px;
+  background-color: #232f34;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 `;
 
 const List = styled.ul`
@@ -24,8 +26,7 @@ const Item = styled.li`
   width: 80px;
   height: 50px;
   text-align: center;
-  border-bottom: 5px solid
-    ${props => (props.current ? "#F9AA33" : "transparent")};
+  border-bottom: 5px solid ${props => (props.current ? "#F9AA33" : "transparent")};
   transition: border-bottom 0.5s ease-in-out;
 `;
 

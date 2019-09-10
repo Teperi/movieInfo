@@ -17,7 +17,6 @@ export default class DetailContainer extends Component {
   }
 
   async componentDidMount() {
-    console.log(this.props);
     const {
       match: {
         params: { id },
@@ -27,7 +26,6 @@ export default class DetailContainer extends Component {
 
     const { isMovie } = this.state;
     const parsedId = parseInt(id);
-    console.log(parsedId);
 
     if (isNaN(parsedId)) {
       return push("/");
@@ -47,8 +45,16 @@ export default class DetailContainer extends Component {
   }
 
   render() {
-    const { result, error, loading } = this.state;
-    console.log(this.state);
-    return <DetailPresenter result={result} error={error} loading={loading} />;
+    const { result, error, loading, isMovie } = this.state;
+    const { location } = this.props;
+    return (
+      <DetailPresenter
+        result={result}
+        error={error}
+        loading={loading}
+        isMovie={isMovie}
+        location={location}
+      />
+    );
   }
 }
